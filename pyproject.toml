@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "xlhc"
+version = "0.0.0"
+description = "A package to generate LHC lines in the Xsuite framework"
+homepage = "https://github.com/xsuite/xlhc"
+repository = "https://github.com/xsuite/xlhc"
+authors = ["Frederik F. Van der Veken <frederik@cern.ch>"]
+readme = "README.md"
+license = "Apache 2.0"
+include = ["LICENSE", "NOTICE"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+numpy = ">=1.0"
+pandas = ">=1.4"
+xobjects = ">=0.2.6"
+xdeps = ">=0.1.1"
+xpart = ">=0.15.0"
+xtrack = ">=0.36.5"
+xfields = ">=0.12.1"
+xmask = ">=0.3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=7.3"
+
+[tool.poetry.extras]
+tests = ["pytest", "ruamel-yaml"]
+
+[build-system]
+# Needed for pip install -e (BTW: need pip version 22)
+requires = ["poetry-core>=1.0.8"]
+build-backend = "poetry.core.masonry.api"
